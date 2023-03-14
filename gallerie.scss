@@ -240,14 +240,29 @@ img
     align-items: center;   display: flex;
     justify-content: center;
     align-items: center;
+    button:hover 
+    {
+        background-color: #FFCC70;
+
+     }
     button 
     {
      font-size: x-large;
-     padding-left: 20%;
-     padding-right: 20%;
      box-shadow: 8px 7px 6px 0px rgba(0,0,0,0.61);
      border: solid 2px;
+     padding-right: 20%;
+     padding-left: 20%;
+     padding-top: 10%;
+     padding-bottom: 10%;
+
+   
+
+     a{
+        color: black;
      }
+    
+   }
+   
 }
 .footer{
     grid-column-start:1 ;
