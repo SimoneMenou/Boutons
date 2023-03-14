@@ -1,0 +1,267 @@
+/*1. cela va faire en sorte que notre container prenne tt la page 
+body{
+    margin: 0;
+}
+.container
+{
+    width: 100vw;
+    height: 100vh;
+}
+*/
+body
+{
+    margin: 0;
+   
+    
+}
+a{
+    text-decoration: none;
+}
+.container
+{
+width: 100vw;
+height: 100vh;
+
+/*Pour spécifier que le container réagira comme une grid display: grid pour créer le layout*/
+display: grid;
+/*Pour créer nos espaces colonne grid-template-columns : fr comme valeur correspond au fraction du total container*/
+/*grid-template-columns: 1fr 1fr 1fr;*/
+grid-template-columns: repeat(3,1fr);
+grid-template-rows:80px 1fr 1fr  200px;
+/* je crée un espace entre les cellules*/
+gap:10px;
+
+/* je crée un espace qui part du bord du container*/
+padding: 10px;
+box-sizing: border-box;
+font-family: 'Amatic SC', cursive;
+font-family: 'Damion', cursive;
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Nanum Gothic Coding', monospace;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Satisfy', cursive;
+font-family: 'Silkscreen', cursive;
+font-size: 20px;
+
+
+}
+.container div
+{
+    padding: 10px;
+    border: 3px solid black;
+   
+  
+}
+
+.header
+{
+    grid-column-start:1 ;
+    grid-column-end: 4 ;
+    font-size: 40px;
+    text-align: center;
+    background-color:royalblue;
+
+}
+.js{
+    grid-column-start:1 ;
+    grid-column-end: 4 ;
+    font-size: 40px;
+    text-align: center;
+    background-color:yellow;
+
+}
+/* display inline-block pour que mon bouton prenne la place du conteneur*/
+
+.animated-link{
+    display: inline-block;
+    background-color: pink;
+    border-radius: 3px;
+    text-decoration: none;
+    color: black;
+  
+   
+}
+.animated-link span{
+    display: inline-block;
+    background-color: purple;
+    border: 1px solid yellow;
+    padding: 30px;
+    font-size: 40px;
+    font-weight: 600;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 
+    transform 0.15s ease-out,
+    color 0.15s ease-out,
+    background-color 0.15s ease-out;
+   
+   
+}
+.animated-link:hover span{
+    transform: translate(-6px,-6px);
+    color: black;
+    background-color: blueviolet;
+
+   
+}
+.content1{
+    background: linear-gradient( 109.6deg,  rgba(118,12,99,1) 11.2%, rgba(71,11,75,1) 98.6% );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+   
+
+}
+.content2{
+   
+
+background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+
+}
+.wavy{
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+    width: 200px;
+    height: 60px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px purple;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+   
+  
+}
+.wavy::before{
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: purple;
+    border-radius: 50% 50% 0 0;
+    transition: all .3s;
+    z-index: -1;
+}
+.wavy:hover::before{
+    top:0;
+    border-radius: 0;
+
+}
+.content3
+{
+
+background: black;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.notif{
+    color:white;
+    position: relative;
+    border: solid 1px red;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+}
+.notif:hover{
+    background-color: red  ;
+    transition: all .2s;
+}
+.notif span {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    background-color: red; 
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 4px black ;
+}
+.content4{
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: azure;
+
+
+}
+.content4>.action{
+    background-color: royalblue;
+    color: white;
+    text-decoration: none;
+    padding: 10px 40px;
+    border-radius: 10px;
+    font-size: 40px;
+    border-bottom: 5px solid aqua;
+    text-shadow:0px -2px aqua;
+    transition: all .1s;
+    -webkit-transition: all .1s;
+    float: left;
+   
+    
+}
+.content4>.action:active{
+ transform: translate(0,5px);
+ -webkit-transform: translate(0,5px) ;
+ border-bottom: 1px solid;
+}
+img
+{
+    width: 50%;
+}
+.content5
+{
+    background-color: #C850C0;
+}
+.content7,.content5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content6
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;   display: flex;
+    justify-content: center;
+    align-items: center;
+    button 
+    {
+     font-size: x-large;
+     padding-left: 20%;
+     padding-right: 20%;
+     box-shadow: 8px 7px 6px 0px rgba(0,0,0,0.61);
+     border: solid 2px;
+     }
+}
+.footer{
+    grid-column-start:1 ;
+    grid-column-end: 4 ;
+    font-size: 20px;
+    text-align: center;
+    background-color: coral;
+}
+@media 
+(max-width: 500px) {
+    /* Place tous les éléments en dessous les uns des autres */
+    .container
+    {
+        display: flex;
+        flex-direction: column;
+     }
+  }
